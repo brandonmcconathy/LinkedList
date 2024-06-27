@@ -1,9 +1,11 @@
 ﻿#include "pch.h"
-#include <iostream>
+#include "iostream"
+#include "LinkedList.h"
 
 int main()
 {
-	std::cout << "Hello, World!\n";
+	LinkedList list;
+	list.Output();
 
 	return 0;
 }
