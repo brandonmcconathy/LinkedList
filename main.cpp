@@ -2,7 +2,6 @@
 #include <iostream>
 
 struct Node {
-
     int val;
     Node* next;
 
@@ -10,13 +9,12 @@ struct Node {
         val = input;
         next = nullptr;
     };
-
 };
 
 
 class LinkedList {
-    Node* head;
-    Node* tail;
+    Node* head = nullptr;
+    Node* tail = nullptr;
     int length = 0;
 
 public:
@@ -61,19 +59,17 @@ public:
                 curr = curr->next;
             }
         };
-
     };
-
 };
 
 
 int main(int argc, const char* argv[]) {
 
+    LinkedList list;
+
     Node firstVal(10);
     Node secondVal(5);
     Node thirdVal(128);
-
-    LinkedList list;
 
     list.Add(firstVal);
     list.Add(secondVal);
