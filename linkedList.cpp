@@ -93,13 +93,34 @@ void LinkedList::Shift() {
 };
 
 // O(n)
+void LinkedList::Insert(int input, int index) {
+    if (length == 0 || index >= length) {
+        Push(input);
+    }
+    else if (index == 0) {
+        Unshift(input);
+    }
+    else {
+        Node* prevNode = head;
+        for (int i = 0; i < index - 1; ++i)
+        {
+            prevNode = prevNode->next;
+        }
+        Node* newNode = new Node(input);
+        newNode->next = prevNode->next;
+        prevNode->next = newNode;
+        ++length;
+    }
+};
+
+// O(n)
 void LinkedList::PrintList() {
     if (length == 0) {
         std::cout << "List is empty" << std::endl;
     }
     else {
         Node* curr = head;
-        for (int i = 0; i < length; i++) {
+        for (int i = 0; i < length; ++i) {
             std::cout << i << " curr: " << curr->val << std::endl;
             curr = curr->next;
         }

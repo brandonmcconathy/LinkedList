@@ -29,6 +29,8 @@ public:
     void Pop();
 
     void Shift();
+
+    void Insert(int input, int index);
     
     void PrintList();
 };
