@@ -5,25 +5,24 @@ int main(int argc, const char* argv[]) {
 
     LinkedList list;
 
-    Node firstVal(10);
-    Node secondVal(5);
-    Node thirdVal(128);
-
-    list.Push(firstVal);
-    list.Push(Node(20));
-    list.Push(secondVal);
-    list.Push(thirdVal);
+    list.Push(10);
+    list.Push(20);
+    list.Push(5);
+    list.Push(128);
     list.PrintList();
     std::cout << "Item at index 2 is " << list.Get(2) << std::endl;
 
     list.Shift();
     list.PrintList();
 
-    list.Unshift(Node(200));
+    list.Unshift(200);
     list.PrintList();
 
     list.Pop();
     list.PrintList();
+
+    std::cout << "Head is " << list.Peek() << std::endl;
+    std::cout << "Tail is " << list.Tail() << std::endl;
 
     return 0;
 }

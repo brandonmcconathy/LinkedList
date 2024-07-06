@@ -7,10 +7,12 @@ Node::Node(int input) {
  };
 
 
+// O(1)
 int LinkedList::Length() {
     return length;
 };
 
+// O(1)
 int LinkedList::Peek() {
     if (length == 0) {
         return NULL;
@@ -18,6 +20,7 @@ int LinkedList::Peek() {
     return head->val;
 };
 
+// O(1)
 int LinkedList::Tail() {
     if (length == 0) {
         return NULL;
@@ -25,6 +28,7 @@ int LinkedList::Tail() {
     return tail->val;
 };
 
+// O(n)
 int LinkedList::Get(int index) {
     if (length == 0 || index + 1 > length) {
         return NULL;
@@ -36,31 +40,36 @@ int LinkedList::Get(int index) {
     return currNode->val;
 };
 
-void LinkedList::Push(Node input) {
+// O(1)
+void LinkedList::Push(int input) {
+    Node* nodeInput = new Node(input);
     if (length == 0) {
-        head = &input;
-        tail = &input;
+        head = nodeInput;
+        tail = nodeInput;
     }
     else {
-        tail->next = &input;
-        tail = &input;
+        tail->next = nodeInput;
+        tail = nodeInput;
     };
     length++;
 };
 
-void LinkedList::Unshift(Node input) {
+// O(1)
+void LinkedList::Unshift(int input) {
+    Node* nodeInput = new Node(input);
     if (length == 0) {
-        head = &input;
-        tail = &input;
+        head = nodeInput;
+        tail = nodeInput;
     }
     else {
         Node* tempHead = head;
-        head = &input;
+        head = nodeInput;
         head->next = tempHead;
     }
     ++length;
 };
 
+// O(n)
 void LinkedList::Pop() {
     if (length == 0) {
         return;
@@ -74,6 +83,7 @@ void LinkedList::Pop() {
     --length;
 };
 
+// O(1)
 void LinkedList::Shift() {
     if (length == 0) {
         return;
@@ -82,6 +92,7 @@ void LinkedList::Shift() {
     --length;
 };
 
+// O(n)
 void LinkedList::PrintList() {
     if (length == 0) {
         std::cout << "List is empty" << std::endl;

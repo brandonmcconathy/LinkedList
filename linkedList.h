@@ -22,9 +22,9 @@ public:
 
     int Get(int index);
 
-    void Push(Node input);
+    void Push(int input);
 
-    void Unshift(Node input);
+    void Unshift(int input);
 
     void Pop();
 
