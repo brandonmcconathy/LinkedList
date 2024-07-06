@@ -14,6 +14,7 @@ int main(int argc, const char* argv[]) {
     list.Push(secondVal);
     list.Push(thirdVal);
     list.PrintList();
+    std::cout << "Item at index 2 is " << list.Get(2) << std::endl;
 
     list.Shift();
     list.PrintList();

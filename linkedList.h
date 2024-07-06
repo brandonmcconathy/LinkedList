@@ -20,6 +20,8 @@ public:
 
     int Tail();
 
+    int Get(int index);
+
     void Push(Node input);
 
     void Unshift(Node input);

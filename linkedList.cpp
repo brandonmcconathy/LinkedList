@@ -25,6 +25,17 @@ int LinkedList::Tail() {
     return tail->val;
 };
 
+int LinkedList::Get(int index) {
+    if (length == 0 || index + 1 > length) {
+        return NULL;
+    }
+    Node* currNode = head;
+    for (int i = 0; i < index; ++i) {
+        currNode = currNode->next;
+    }
+    return currNode->val;
+};
+
 void LinkedList::Push(Node input) {
     if (length == 0) {
         head = &input;
