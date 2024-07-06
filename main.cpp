@@ -9,12 +9,18 @@ int main(int argc, const char* argv[]) {
     Node secondVal(5);
     Node thirdVal(128);
 
-    list.Add(firstVal);
-    list.Add(Node(20));
-    list.Add(secondVal);
-    list.Add(thirdVal);
+    list.Push(firstVal);
+    list.Push(Node(20));
+    list.Push(secondVal);
+    list.Push(thirdVal);
 
-    list.Slice();
+    list.PrintList();
+
+    list.Shift();
+
+    list.PrintList();
+
+    list.Unshift(Node(200));
 
     list.PrintList();
 

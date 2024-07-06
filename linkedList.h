@@ -20,9 +20,11 @@ public:
 
     int Tail();
 
-    void Add(Node input);
+    void Push(Node input);
 
-    void Slice();
+    void Unshift(Node input);
 
+    void Shift();
+    
     void PrintList();
 };

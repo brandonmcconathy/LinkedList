@@ -25,7 +25,7 @@ int LinkedList::Tail() {
     return tail->val;
 };
 
-void LinkedList::Add(Node input) {
+void LinkedList::Push(Node input) {
     if (length == 0) {
         head = &input;
         tail = &input;
@@ -37,7 +37,20 @@ void LinkedList::Add(Node input) {
     length++;
 };
 
-void LinkedList::Slice() {
+void LinkedList::Unshift(Node input) {
+    if (length == 0) {
+        head = &input;
+        tail = &input;
+    }
+    else {
+        Node* tempHead = head;
+        head = &input;
+        head->next = tempHead;
+    }
+    ++length;
+};
+
+void LinkedList::Shift() {
     if (length == 0) {
         return;
     }
