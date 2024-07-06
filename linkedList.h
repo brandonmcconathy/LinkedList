@@ -24,6 +24,8 @@ public:
 
     void Unshift(Node input);
 
+    void Pop();
+
     void Shift();
     
     void PrintList();

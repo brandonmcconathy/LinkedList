@@ -50,6 +50,19 @@ void LinkedList::Unshift(Node input) {
     ++length;
 };
 
+void LinkedList::Pop() {
+    if (length == 0) {
+        return;
+    }
+    Node* newTail = head;
+    for (int i = 0; i < length - 2; ++i) {
+        newTail = newTail->next;
+    }
+    tail = newTail;
+    tail->next = nullptr;
+    --length;
+};
+
 void LinkedList::Shift() {
     if (length == 0) {
         return;

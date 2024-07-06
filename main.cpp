@@ -13,15 +13,15 @@ int main(int argc, const char* argv[]) {
     list.Push(Node(20));
     list.Push(secondVal);
     list.Push(thirdVal);
-
     list.PrintList();
 
     list.Shift();
-
     list.PrintList();
 
     list.Unshift(Node(200));
+    list.PrintList();
 
+    list.Pop();
     list.PrintList();
 
     return 0;
