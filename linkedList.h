@@ -22,5 +22,7 @@ public:
 
     void Add(Node input);
 
+    void Slice();
+
     void PrintList();
 };

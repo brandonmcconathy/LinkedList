@@ -10,8 +10,11 @@ int main(int argc, const char* argv[]) {
     Node thirdVal(128);
 
     list.Add(firstVal);
+    list.Add(Node(20));
     list.Add(secondVal);
     list.Add(thirdVal);
+
+    list.Slice();
 
     list.PrintList();
 

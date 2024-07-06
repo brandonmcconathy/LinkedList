@@ -37,6 +37,14 @@ void LinkedList::Add(Node input) {
     length++;
 };
 
+void LinkedList::Slice() {
+    if (length == 0) {
+        return;
+    }
+    head = head->next;
+    --length;
+};
+
 void LinkedList::PrintList() {
     if (length == 0) {
         std::cout << "List is empty" << std::endl;
