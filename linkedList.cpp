@@ -114,6 +114,24 @@ void LinkedList::Insert(int input, int index) {
 };
 
 // O(n)
+void LinkedList::Delete(int index) {
+    if (length == 0 || index >= length - 1) {
+        Pop();
+    }
+    else if (index == 0) {
+        Shift();
+    }
+    else {
+        Node* prevNode = head;
+        for (int i = 0; i < index - 1; ++i) {
+            prevNode = prevNode->next;
+        }
+        prevNode->next = prevNode->next->next;
+        --length;
+    }
+};
+
+// O(n)
 void LinkedList::PrintList() {
     if (length == 0) {
         std::cout << "List is empty" << std::endl;

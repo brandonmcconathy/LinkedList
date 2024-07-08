@@ -31,6 +31,8 @@ public:
     void Shift();
 
     void Insert(int input, int index);
+
+    void Delete(int index);
     
     void PrintList();
 };

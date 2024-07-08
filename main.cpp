@@ -24,6 +24,9 @@ int main(int argc, const char* argv[]) {
     list.Insert(1000, 2);
     list.PrintList();
 
+    list.Delete(1);
+    list.PrintList();
+
     std::cout << "Head is " << list.Peek() << std::endl;
     std::cout << "Tail is " << list.Tail() << std::endl;
 
