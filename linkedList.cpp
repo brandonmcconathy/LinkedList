@@ -1,11 +1,6 @@
-#include "linkedList.h"
 #include <iostream>
-
-Node::Node(int input) {
-    val = input;
-    next = nullptr;
- };
-
+#include "Node.h"
+#include "linkedList.h"
 
 // O(1)
 int LinkedList::Length() {

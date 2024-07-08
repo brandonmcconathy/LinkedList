@@ -21,6 +21,12 @@
     <ClCompile Include="linkedList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Queue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Node.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="PropertySheet.props" />
@@ -31,6 +37,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="linkedList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Queue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
