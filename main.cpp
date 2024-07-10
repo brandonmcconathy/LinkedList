@@ -42,6 +42,9 @@ int main(int argc, const char* argv[]) {
     std::cout << "Length: " << queue.Length() << std::endl;
     queue.PrintList();
 
+    queue.Remove();
+    queue.PrintList();
+
     std::cout << "Head is " << queue.Peek() << std::endl;
     std::cout << "Tail is " << queue.Tail() << std::endl;
 

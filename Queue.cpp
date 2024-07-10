@@ -32,6 +32,16 @@ void Queue::Add(int input) {
     ++length;
 }
 
+int Queue::Remove() {
+    if (length == 0) {
+        return NULL;
+    }
+    Node* nodeToRemove = head;
+    head = head->next;
+    --length;
+    return nodeToRemove->val;
+}
+
 void Queue::PrintList() {
     if (length == 0) {
         std::cout << "List is empty" << std::endl;

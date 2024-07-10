@@ -11,6 +11,6 @@ public:
 	int Peek();
 	int Tail();
 	void Add(int input);
-	void Remove();
+	int Remove();
 	void PrintList();
 };
