@@ -10,7 +10,7 @@ public:
 	int Length();
 	int Peek();
 	int Tail();
-	void Add(int input);
-	int Remove();
+	void Push(int input);
+	int Pop();
 	void PrintList();
 };

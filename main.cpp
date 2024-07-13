@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include "linkedList.h"
 #include "Queue.h"
+#include "Stack.h"
 
 int main(int argc, const char* argv[]) {
 
@@ -47,6 +48,25 @@ int main(int argc, const char* argv[]) {
 
     std::cout << "Head is " << queue.Peek() << std::endl;
     std::cout << "Tail is " << queue.Tail() << std::endl;
+
+    std::cout << "\nStack:" << std::endl;
+
+    Stack stack;
+
+    stack.Push(12);
+    stack.Push(20);
+    stack.Push(4);
+    stack.Push(72);
+    stack.PrintList();
+
+    stack.Pop();
+    stack.PrintList();
+
+    stack.Pop();
+    stack.PrintList();
+
+    std::cout << "Head is " << stack.Peek() << std::endl;
+    std::cout << "Tail is " << stack.Tail() << std::endl;
 
     return 0;
 }
