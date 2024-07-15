@@ -1,4 +1,4 @@
 #include <iostream>
-#include "Node.h"
+#include "DoublyNode.h"
 #include "DoublyLinkedList.h"
 
