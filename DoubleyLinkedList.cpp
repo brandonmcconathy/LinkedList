@@ -22,3 +22,17 @@ int DoublyLinkedList::Tail() {
     };
     return tail->val;
 };
+
+void DoublyLinkedList::Push(int input) {
+    DoublyNode* newNode = new DoublyNode(input);
+    if (length == 0) {
+        head = newNode;
+        tail = newNode;
+    }
+    else {
+        DoublyNode* tempTail = tail;
+        tail->next = newNode;
+        tail = newNode;
+        tail->prev = tempTail;
+    }
+};
