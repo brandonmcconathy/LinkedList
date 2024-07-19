@@ -23,6 +23,14 @@ int DoublyLinkedList::Tail() {
     return tail->val;
 };
 
+int DoublyLinkedList::Get(int index) {
+    DoublyNode* currNode = head;
+    for (int i = 0; i < index; ++i) {
+        currNode = currNode->next;
+    }
+    return currNode->val;
+}
+
 void DoublyLinkedList::Push(int input) {
     DoublyNode* newNode = new DoublyNode(input);
     if (length == 0) {
