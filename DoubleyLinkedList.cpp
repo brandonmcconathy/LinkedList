@@ -23,6 +23,7 @@ int DoublyLinkedList::Tail() {
     return tail->val;
 };
 
+// O(n)
 int DoublyLinkedList::Get(int index) {
     DoublyNode* currNode = head;
     for (int i = 0; i < index; ++i) {
@@ -31,6 +32,7 @@ int DoublyLinkedList::Get(int index) {
     return currNode->val;
 }
 
+// O(1)
 void DoublyLinkedList::Push(int input) {
     DoublyNode* newNode = new DoublyNode(input);
     if (length == 0) {
@@ -43,4 +45,21 @@ void DoublyLinkedList::Push(int input) {
         tail = newNode;
         tail->prev = tempTail;
     }
+    ++length;
 };
+
+// O(1)
+void DoublyLinkedList::Unshift(int input) {
+    DoublyNode* newNode = new DoublyNode(input);
+    if (length == 0) {
+        head = newNode;
+        tail = newNode;
+    }
+    else {
+        DoublyNode* tempHead = head;
+        head->prev = newNode;
+        head = newNode;
+        head->next = tempHead;
+    }
+    ++length;
+}
